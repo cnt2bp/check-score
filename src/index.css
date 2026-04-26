@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Itim", cursive, ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #301944;
+  --color-primary-container: #472f5b;
+  --color-secondary-container: #f4e656; /* The signature yellow */
+  --color-tertiary-fixed: #ffd8e7;
+  --color-tertiary-accent: #E06C4A; /* Terracotta */
+  --color-soft-lavender: #CCA4B4;
+}
+
+:root {
+  font-family: 'Itim', cursive;
+}
+
+body {
+  @apply bg-[#fcf8f9] text-[#1b1b1c] transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-[#121014] text-[#fcf8f9];
+}
+
+/* Custom shadow for the school buttons */
+.school-shadow {
+  box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.active-tab-dot::after {
+  content: '';
+  @apply w-1.5 h-1.5 bg-secondary-container rounded-full mt-1;
+}
